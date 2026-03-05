@@ -8,15 +8,17 @@
 
 ### 依赖版本
 
-| 依赖 | 版本 |
-|------|------|
-| Python | 3.6+ |
-| PyTorch | 1.9.0+ |
-| MNE | 0.22.1 |
-| NumPy / SciPy | - |
-| scikit-learn | - |
-| matplotlib / seaborn | - |
-| pandas | - |
+
+| 依赖                   | 版本     |
+| -------------------- | ------ |
+| Python               | 3.6+   |
+| PyTorch              | 1.9.0+ |
+| MNE                  | 0.22.1 |
+| NumPy / SciPy        | -      |
+| scikit-learn         | -      |
+| matplotlib / seaborn | -      |
+| pandas               | -      |
+
 
 ### 安装
 
@@ -38,6 +40,7 @@ pip install numpy scipy scikit-learn matplotlib seaborn pandas
 - **相关工具箱**：[Single-Channel-EEG-Denoise](https://github.com/ncclabsustech/Single-Channel-EEG-Denoise)
 
 数据包含：
+
 - `EEG_all_epochs.npy`：干净 EEG 片段
 - `EOG_all_epochs.npy`：眼电噪声片段
 - `EMG_all_epochs.npy`：肌电噪声片段
@@ -127,12 +130,14 @@ python train_attention.py
 
 ## 模型简介
 
-| 模型 | 说明 |
-|------|------|
+
+| 模型                      | 说明                                        |
+| ----------------------- | ----------------------------------------- |
 | **CNN (EEGClassifier)** | 4 层 1D 卷积 + BN + 池化 + 全连接，输入长度 512，输出 3 类 |
-| **ResNet1D** | 1D ResNet 结构，适合较长序列特征提取 |
-| **CNN-LSTM** | 1D CNN 提取特征后经双向 LSTM 与全连接层分类 |
-| **CNN-Attention** | CNN 特征 + 自注意力机制，突出关键时间/通道信息 |
+| **ResNet1D**            | 1D ResNet 结构，适合较长序列特征提取                   |
+| **CNN-LSTM**            | 1D CNN 提取特征后经双向 LSTM 与全连接层分类              |
+| **CNN-Attention**       | CNN 特征 + 自注意力机制，突出关键时间/通道信息               |
+
 
 分类目标为三分类：**0-干净 EEG**、**1-EOG 污染**、**2-EMG 污染**。
 
@@ -142,7 +147,7 @@ python train_attention.py
 
 - **类别 0**：干净 EEG  
 - **类别 1**：以 EOG 污染为主的 EEG（如纯 EEG+EOG、或 EOG 占主导的混合）  
-- **类别 2**：以 EMG 污染为主的 EEG（如纯 EEG+EMG、或 EMG 占主导的混合）  
+- **类别 2**：以 EMG 污染为主的 EEG（如纯 EEG+EMG、或 EMG 占主导的混合）
 
 混合时通过设定信噪比（如 -7 dB～2 dB）控制噪声强度，数据生成逻辑见 `data/generate_classification_data.py` 与 `data/data_input.py`。
 
@@ -151,9 +156,10 @@ python train_attention.py
 ## 参考文献与数据来源
 
 - EEGdenoiseNet 数据集论文：*EEGdenoiseNet: A benchmark dataset for deep learning solutions of EEG denoising*，Journal of Neural Engineering，2022  
-- 数据集与代码：[EEGdenoiseNet (G-node)](https://gin.g-node.org/NCClab/EEGdenoiseNet)，[Single-Channel-EEG-Denoise](https://github.com/ncclabsustech/Single-Channel-EEG-Denoise)
+- 数据集：[EEGdenoiseNet (G-node)](https://gin.g-node.org/NCClab/EEGdenoiseNet)
 
 ## 说明
 
 - 若数据路径与上述不同，请在 `data/generate_data.py`、`data/generate_classification_data.py` 以及各 `code/train_*.py` 中修改为本地路径。  
 - 本项目仅供学习。
+
