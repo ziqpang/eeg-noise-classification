@@ -155,6 +155,42 @@ python train_attention.py
 
 ---
 
+## 上传到 GitHub
+
+本地已完成 Git 初始化与首次提交。按以下步骤推到 GitHub：
+
+### 1. 在 GitHub 上新建仓库
+
+1. 打开 [GitHub](https://github.com) 并登录。
+2. 点击右上角 **+** → **New repository**。
+3. 填写仓库名（如 `eeg-noise-classification`），选择 Public，**不要**勾选 “Add a README”或 “Add .gitignore”（本地已有）。
+4. 点击 **Create repository**。
+
+### 2. 关联远程仓库并推送
+
+在项目根目录 `code_main` 下执行（将 `YOUR_USERNAME` 和 `YOUR_REPO` 换成你的 GitHub 用户名和仓库名）：
+
+```bash
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git branch -M main
+git push -u origin main
+```
+
+若本地默认分支是 `master` 且你希望保持：
+
+```bash
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git push -u origin master
+```
+
+首次推送时可能要求输入 GitHub 用户名和密码；密码需使用 [Personal Access Token](https://github.com/settings/tokens) 而非登录密码。
+
+### 说明
+
+- 大型数据文件（`.npy`）已通过 `.gitignore` 排除，不会推送到 GitHub。他人复现需自行从 [EEGdenoiseNet](https://gin.g-node.org/NCClab/EEGdenoiseNet) 下载数据并按 README 放置。
+
+---
+
 ## 说明
 
 - 若数据路径与上述不同，请在 `data/generate_data.py`、`data/generate_classification_data.py` 以及各 `code/train_*.py` 中修改为本地路径。  
