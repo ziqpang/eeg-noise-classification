@@ -1,0 +1,31 @@
+ResNet1D_Model Performance Summary
+=======================================
+
+Overall Performance:
+
+Overall Accuracy: 0.9484 ± 0.0118
+
+Class-wise Performance:
+Clean: 99.4203 ± 2.7996
+EOG: 88.5616 ± 4.7227
+EMG: 91.4058 ± 5.4926
+
+Average Confusion Matrix (%):
+[[100.0   0.0   0.0]
+ [  0.6  91.5   7.9]
+ [  0.0   4.4  95.6]]
+Classification Report:
+              precision    recall  f1-score   support
+
+       Clean       0.99      1.00      0.99       500
+         EOG       0.95      0.92      0.93      1000
+         EMG       0.92      0.96      0.94      1000
+
+    accuracy                           0.95      2500
+   macro avg       0.96      0.96      0.96      2500
+weighted avg       0.95      0.95      0.95      2500
+
+Aggregated Metrics:
+Overall Accuracy: 0.9484
+Macro Precision: 0.9553
+Macro Recall: 0.9570

@@ -1,0 +1,31 @@
+CNN_LSTM_Model Performance Summary
+==================================================
+
+Overall Performance:
+Overall Accuracy: 0.9416 ± 0.0160
+
+Class-wise Performance:
+   Clean: 100.0000 ± 0.0000
+     EOG: 91.0000 ± 4.3818
+     EMG: 92.1000 ± 2.8089
+
+Average Confusion Matrix (%):
+[[99.8  0.2  0.0]
+ [ 1.1 91.1  7.8]
+ [ 0.1  5.5 94.4]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+       Clean       0.98      1.00      0.99       500
+         EOG       0.94      0.91      0.93      1000
+         EMG       0.92      0.94      0.93      1000
+
+    accuracy                           0.94      2500
+   macro avg       0.95      0.95      0.95      2500
+weighted avg       0.94      0.94      0.94      2500
+
+Aggregated Metrics:
+Overall Accuracy: 0.9416
+Macro Precision: 0.9474
+Macro Recall: 0.9510

@@ -1,0 +1,29 @@
+CNN_Attention_Model Performance Summary
+==================================================
+
+Overall Accuracy: 0.9354 ± 0.0183
+
+Class-wise Performance:
+   Clean: 99.5500 ± 1.2496
+     EOG: 88.0740 ± 5.2382
+     EMG: 90.8890 ± 4.6962
+
+Average Confusion Matrix (%):
+[[100.0   0.0   0.0]
+ [  2.0  90.2   7.9]
+ [  0.3   6.0  93.7]]
+Classification Report:
+              precision    recall  f1-score   support
+
+       Clean       0.96      1.00      0.98     50000
+         EOG       0.94      0.90      0.92    100000
+         EMG       0.92      0.94      0.93    100000
+
+    accuracy                           0.94    250000
+   macro avg       0.94      0.95      0.94    250000
+weighted avg       0.94      0.94      0.94    250000
+
+Aggregated Metrics:
+Overall Accuracy: 0.9354
+Macro Precision: 0.9388
+Macro Recall: 0.9461

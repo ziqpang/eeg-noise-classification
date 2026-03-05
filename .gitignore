@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (large .npy, avoid pushing to GitHub)
+*.npy
+data/*.npy
+**/classification_signals.npy
+**/classification_labels.npy
+
+# Model checkpoints / outputs (optional: exclude large result files)
+# results/
+# *.pt
+# *.pth
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

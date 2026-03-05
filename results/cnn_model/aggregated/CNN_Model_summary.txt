@@ -1,0 +1,31 @@
+CNN_Model Performance Summary
+==================================================
+
+Overall Performance:
+Overall Accuracy: 0.9292 ± 0.0139
+
+Class-wise Performance:
+   Clean: 0.9652 ± 0.9980
+     EOG: 0.9249 ± 0.8990
+     EMG: 0.9149 ± 0.9250
+
+Average Confusion Matrix (%):
+[[99.8  0.2  0. ]
+ [ 1.5 89.9  8.6]
+ [ 0.3  7.2 92.5]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+       Clean       0.97      1.00      0.98       500
+         EOG       0.92      0.90      0.91      1000
+         EMG       0.91      0.93      0.92      1000
+
+    accuracy                           0.93      2500
+   macro avg       0.94      0.94      0.94      2500
+weighted avg       0.93      0.93      0.93      2500
+
+Aggregated Metrics:
+Overall Accuracy: 0.9292
+Macro Precision: 0.9350
+Macro Recall: 0.9407
